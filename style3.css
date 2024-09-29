@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+#banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/bg2.jpg) center / cover;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.banner-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding-top: 35px;
+    margin-top: 0px;
+}
+
+.logo {
+    width: 105px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+
+.banner-text h1 {
+    font-size: 40px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.banner-text p1 {
+    font-size: 20px;
+    font-style: italic;
+}
+
+body.show-chatbot #chatbotText {
+    opacity: 0;
+}
+
+.chatbot {
+    position: absolute;
+    right: 540px;
+    bottom: 10px;
+    width: 420px;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transform-origin: bottom right;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+    transition: all 0.1s ease;
+}
+
+body.show-chatbot .chatbot {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.chatbot header {
+    padding: 16px 0;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    background: #0385ff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.chatbot header span {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    display: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.upper {
+    background-color: #7300ff;
+    color: #000000;
+    padding: 10px;
+    margin-top: -16px; 
+}
+
+.lower {
+    background-color: #ff8800;
+    color: #000000;
+    padding: 10px;
+    margin-bottom: -16px; 
+}
+.lower h5{
+    font-size: 15px;
+}
+.chatbox {
+    overflow-y: auto;
+    height: 450px;
+    padding-top: 25px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+:where(.chatbox, textarea)::-webkit-scrollbar {
+    width: 6px;
+}
+
+:where(.chatbox, textarea)::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 25px;
+}
+
+:where(.chatbox, textarea)::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
+}
+
+
+#bth1 {
+    width: 250px;
+    position: absolute;
+    right: 110px;
+    top: 52px;
+    cursor: pointer;
+}
+
+#bth1 a {
+    position: relative;
+    color: #43e8f4;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#bth1 a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: -2px;
+    left: 0;
+    transition: width 0.8s ease-in-out;
+}
+
+#bth1 a:hover::before {
+    width: 100%;
+    transition: width 0.8s ease-in-out;
+    left: 0;
+}
+
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    src: url('https://fonts.gstatic.com/s/materialsymbolsoutlined/v48/88kk8bPFkcTVVx6a0DSB1rVVcV8J4_COnTMkfW_84_Q6UvgMJDWCxlYIxFaw3KtbfKg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif;
+}
+
+
+
+
+

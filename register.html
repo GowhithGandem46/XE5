@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register XE-5</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <img src="images/logo3.png" width="103" height="70" class="logo">
+    <div class="wrapper">
+        <form action="" id="rf">
+            <h1>Register to XE-5</h1>
+            <div class="alert">Account created successfully!<br>Now you can Login</div>
+            <div class="input-box">
+                <input type="text" id="un" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id="ui" placeholder="UserId" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="pass" placeholder="Password" required>
+                <span class="password-toggle" onclick="togglePassword('pass')">
+                    <i class='bx bx-show'></i>
+                </span>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="re_pass" placeholder="Re-enter Password" required>
+                <span class="password-toggle" onclick="togglePassword('re_pass')">
+                    <i class='bx bx-show'></i>
+                </span>
+                <i class='bx bxs-lock-alt'></i>
+                <br><br><br><br>
+            </div>
+            <div class="remember-forgot">
+                <div>
+                    <label for="male-option">GENDER</label>
+                    <div class="gender-option">
+                        <input type="radio" name="gender" id="male-option" value="male" style="margin-left: 65px;"> Male
+                    </div>
+                </div>
+                <div>
+                    <label for="female-option"></label>
+                    <div class="gender-option">
+                        <input type="radio" name="gender" id="female-option" value="female"> Female
+                    </div>
+                </div>
+            </div>                                                
+            <p class="pp">By clicking Register, you agree to our        <a href="#">Privacy Policy for XE-5</a></p>
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="#" id="l1">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <div id="bth">
+        <a href="#" id="l2">Login</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="#" id="i">Back to HOME</a>
+    </div>
+    <script>
+        document.getElementById("l1").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            setTimeout(function () {
+                window.location.href = "login.html"; // Redirect after a delay
+            }, 1000); // 1000 milliseconds (1 second) delay
+        });
+
+        document.getElementById("l2").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            setTimeout(function () {
+                window.location.href = "login.html"; // Redirect after a delay
+            }, 1000); // 1000 milliseconds (1 second) delay
+        });
+    
+        document.getElementById("i").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+            setTimeout(function () {
+                window.location.href = "index.html"; // Redirect after a delay
+            }, 1000); // 1000 milliseconds (1 second) delay
+        });
+
+        function togglePassword(fieldId) {
+            var passwordField = document.getElementById(fieldId);
+            var eyeIcon = document.querySelector(`#${fieldId} + .password-toggle i`);
+
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                eyeIcon.classList.remove('bx-show');
+                eyeIcon.classList.add('bx-hide');
+            } else {
+                passwordField.type = 'password';
+                eyeIcon.classList.remove('bx-hide');
+                eyeIcon.classList.add('bx-show');
+            }
+        }   
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="fb.js"></script>
+</body>
+
+</html>

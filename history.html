@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to XE-5</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content ="width = device-width, initial-scale = 1">
+        <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+</head>
+
+<body>
+    <section id="banner">
+        <img src="images/logo3.png" width="103" height="70" class="logo">
+        <div class="banner-text">
+            <h1>Welcome to XE-5</h1>
+            <p1>Transforming Mental Wellness<br><br></p1>
+            <div id="bth1">
+              <a href="#" id="welcBtn">Back to WelcomePage</a>
+            </div>
+        </div>
+          <div class="chatbot">
+            <header>
+              <section class="upper">
+                <h2>XE-5</h2>
+              </section>
+              <section class="lower">
+                <h5>Showing Chat History</h5>
+              </section>
+            </header>
+            <ul class="chatbox">
+            </ul>
+          </div>
+          <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="script2.js" defer></script>
+    <script>
+      document.getElementById("welcBtn").addEventListener("click", function (event) {
+          event.preventDefault(); // Prevent the default link behavior
+          setTimeout(function () {
+              window.location.href = "welcome1.html"; // Redirect after a delay
+          }, 1500); // 1000 milliseconds (1 second) delay
+      });
+  </script>
+</body>
+
+</html>
